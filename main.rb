@@ -1,12 +1,16 @@
 # frozen_string_literal: true
 
-require 'gosu'
-
 class Main < Gosu::Window
+  X = 640
+  Y = 480
+
   def initialize
-    super 640, 480
+    super X, Y
     self.caption = 'T-Rex Run'
+    @t_rex = TRex.new
+  end
+
+  def draw
+    @t_rex.draw
   end
 end
-
-Main.new.show
