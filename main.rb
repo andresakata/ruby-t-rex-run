@@ -10,6 +10,10 @@ class Main < Gosu::Window
     @t_rex = TRex.new
   end
 
+  def update
+    @t_rex.update
+  end
+
   def draw
     @t_rex.draw
   end
