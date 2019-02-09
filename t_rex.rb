@@ -31,15 +31,15 @@ class TRex
   end
 
   def update_y_accel
-    if @y_accel < 0
+    if @y_accel.negative?
       going_up
-    elsif @y_accel > 0
+    elsif @y_accel.positive?
       going_down
     end
   end
 
   def going_up
-    @y_accel *= 0.82 unless @y_accel == 0
+    @y_accel *= 0.82 unless @y_accel.zero?
     @y_accel = 1 if @y_accel > -1
   end
 
