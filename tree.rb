@@ -3,7 +3,7 @@
 class Tree
   include Square
 
-  attr_accessor :x, :y
+  attr_reader :x, :y
 
   IMG_Y = 48
   IMG_X = 25

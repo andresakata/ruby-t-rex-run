@@ -18,13 +18,17 @@ class Main < Gosu::Window
   end
 
   def collision?
-    collision_point(@t_rex.square[0], @tree.square) ||
-      collision_point(@t_rex.square[1], @tree.square)
+    tree_square = @tree.square
+    t_rex_square = @t_rex.square
+    collision_point(t_rex_square[0], tree_square) ||
+      collision_point(t_rex_square[1], tree_square)
   end
 
   def collision_point(point_a, square)
-    (square[0][0]..square[1][0]).cover?(point_a[0]) &&
-      (square[0][1]..square[1][1]).cover?(point_a[1])
+    square_point_a = square[0]
+    square_point_b = square[1]
+    (square_point_a[0]..square_point_b[0]).cover?(point_a[0]) &&
+      (square_point_a[1]..square_point_b[1]).cover?(point_a[1])
   end
 
   def draw

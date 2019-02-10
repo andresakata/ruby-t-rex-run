@@ -3,7 +3,7 @@
 class TRex
   include Square
 
-  attr_accessor :x, :y
+  attr_reader :x, :y
 
   INITIAL_X = Main::X * 0.1
   INITIAL_Y = Main::Y * 0.5
