@@ -4,5 +4,4 @@ source 'https://rubygems.org'
 
 gem 'flay'
 gem 'gosu'
-gem 'reek'
 gem 'rubocop'
