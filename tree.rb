@@ -18,7 +18,7 @@ class Tree
   end
 
   def update
-    @x = Main::X if @x < 0
+    @x = Main::X if @x.negative?
     @x -= 10
   end
 
