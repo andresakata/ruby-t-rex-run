@@ -3,9 +3,11 @@
 class TRex
   INITIAL_X = Main::X * 0.1
   INITIAL_Y = Main::Y * 0.5
+  IMG_X = 44
+  IMG_Y = 47
 
   def initialize
-    @tiles = Gosu::Image.load_tiles('media/t_rex_running.png', 44, 47)
+    @tiles = Gosu::Image.load_tiles('media/t_rex_running.png', IMG_X, IMG_Y)
     @y = INITIAL_Y
     @y_accel = 0
     @jumping = false
